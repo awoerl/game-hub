@@ -26,12 +26,16 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   }
 
   if (isLoading)
-    return skeletons.map((s) => (
-      <HStack marginY="10px" height="32px" marginBottom="10px" key={s}>
-        <Skeleton borderRadius="8px" width="42px" height="100%" />
-        <Skeleton borderRadius="8px" width="100%" height="100%" />
-      </HStack>
-    ));
+    return (
+      <>
+        {skeletons.map((s) => (
+          <HStack marginY="10px" height="32px" marginBottom="10px" key={s}>
+            <Skeleton borderRadius="8px" width="42px" height="100%" />
+            <Skeleton borderRadius="8px" width="100%" height="100%" />
+          </HStack>
+        ))}
+      </>
+    );
 
   return (
     <>

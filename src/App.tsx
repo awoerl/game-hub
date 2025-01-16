@@ -13,6 +13,7 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;
+  pageSize: number;
   search: string;
 }
 
@@ -22,6 +23,7 @@ function App() {
     platform: null,
     sortOrder: "",
     search: "",
+    pageSize: 40,
   });
 
   return (

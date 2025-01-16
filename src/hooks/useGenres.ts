@@ -15,7 +15,6 @@ const useGenres = () => useQuery({
   queryKey: CACHE_KEY_GENRES,
   queryFn: () =>  apiClient.getAll(),
   staleTime: 24 * 3600 * 1000, // 24 hours
-    initialData: {count: genres.length, results: genres}
  });    
 
 

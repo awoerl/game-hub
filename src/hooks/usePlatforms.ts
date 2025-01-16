@@ -9,7 +9,9 @@ export interface Platform {
   slug: string; 
 }
 
-const apiClient = new APIClient<Platform>('/platforms/list/parents');
+const apiClient = new APIClient<Platform>('/platforms/lists/parents');
+
+console.log(apiClient.getAll());
 
 const usePlatforms = () => useQuery({
   queryKey: CACHE_KEY_PLATFORMS,

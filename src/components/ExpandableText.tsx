@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from "react";
 
 interface Props {
   children: string;
-  limit: number;
+  limit?: number;
 }
 const ExpandableText = ({ children, limit = 300 }: Props) => {
   if (!children) {
